@@ -1,0 +1,14 @@
+{
+    "name": "3d-shooter-snake",
+    "version": "1.0.0",
+    "description": "3D Shooter Snake Game",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "socket.io": "^4.0.0"
+    }
+  }
+  

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Shooter Snake</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="mainMenu" class="menu">
+        <h1>3D Shooter Snake</h1>
+        <button onclick="showAccountMenu()">Account</button>
+        <button onclick="showLobbyMenu()">Lobby</button>
+        <button onclick="showFriendMenu()">Friends</button>
+    </div>
+
+    <div id="accountMenu" class="menu">
+        <h2>Account</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="createAccountButton">Create Account</button>
+        <button id="loginButton">Login</button>
+        <button onclick="showMainMenu()">Back</button>
+    </div>
+
+    <div id="lobbyMenu" class="menu">
+        <h2>Lobby</h2>
+        <button id="createLobbyButton">Create Lobby</button>
+        <button id="joinLobbyButton">Join Lobby</button>
+        <button id="leaveLobbyButton">Leave Lobby</button>
+        <div id="lobbyStatus"></div>
+        <button onclick="showMainMenu()">Back</button>
+    </div>
+
+    <div id="friendMenu" class="menu">
+        <h2>Friends</h2>
+        <input type="text" id="friendId" placeholder="Friend ID">
+        <button id="addFriendButton">Add Friend</button>
+        <button id="removeFriendButton">Remove Friend</button>
+        <button id="inviteFriendButton">Invite Friend</button>
+        <div id="friendList"></div>
+        <button onclick="showMainMenu()">Back</button>
+    </div>
+
+    <div id="gameContainer"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
